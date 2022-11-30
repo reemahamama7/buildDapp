@@ -2,10 +2,11 @@
   "name": "my-dapp",
   "version": "0.1.0",
   "private": true,
+  "homepage":"https://devnars.com/forum",
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
+    "build": "next build && next export",
+    "start": "NODE_ENV=production node server.js",
     "lint": "next lint",
     "compile": "solcjs --abi --include-path node_modules/ --base-path . blockchain/contracts/vendingMachine.sol --output-dir blockchain/build"
   },
